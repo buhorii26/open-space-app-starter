@@ -1,8 +1,8 @@
 /**
  * @TODO: Define all the actions (creator) that uses a combination of actions from various domain
  */
-import api from '../../utils/api';
 import { hideLoading, showLoading } from 'react-redux-loading-bar';
+import api from '../../utils/api';
 import { receiveTalksActionCreator } from '../talks/action';
 import { receiveUsersActionCreator } from '../users/action';
 
@@ -16,6 +16,7 @@ function asyncPopulateUsersAndTalks() {
       dispatch(receiveUsersActionCreator(users));
       dispatch(receiveTalksActionCreator(talks));
     } catch (error) {
+      dispatch(showLoading());
       alert(error.message);
     }
     dispatch(hideLoading());
