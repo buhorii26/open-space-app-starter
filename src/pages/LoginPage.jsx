@@ -10,7 +10,7 @@ function LoginPage() {
 
   const onLogin = ({ id, password }) => {
     // @TODO: dispatch async action to login
-    dispatch(asyncSetAuthUser({id, password}));
+    dispatch(asyncSetAuthUser({ id, password }));
   };
 
   return (
@@ -22,7 +22,7 @@ function LoginPage() {
         <h2>
           See
           {' '}
-          <strong>The World</strong>
+          <strong>The World One Piece</strong>
           ,
           {' '}
           <br />
